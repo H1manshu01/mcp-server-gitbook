@@ -51,5 +51,3 @@ This project follows **semantic versioning**:
 - Corrected typo in `faq.md` (“capabilties” → “capabilities”)
 
 ---
-
-> 🧠 Don’t forget to update this changelog every time you make a meaningful change to the documentation or server examples!

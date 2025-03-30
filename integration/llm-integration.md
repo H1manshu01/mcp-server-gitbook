@@ -31,10 +31,10 @@ sequenceDiagram
 
 | LLM Platform | Native MCP Support | Integration Method
 | --- | --- | --- |
-| Anthropic Claude | âœ… Yes | Claude + Tools via MCP
-| OpenAI GPT | âŒ Not yet native | Use custom GPT function calling + MCP client proxy
-| Google Gemini | âŒ Not yet native | Custom tool calling layer
-| Meta LLaMA | âŒ Dev-only | Needs wrapper
+| Anthropic Claude | Yes | Claude + Tools via MCP
+| OpenAI GPT | Not yet native | Use custom GPT function calling + MCP client proxy
+| Google Gemini | Not yet native | Custom tool calling layer
+| Meta LLaMA |  Dev-only | Needs wrapper
 
 ## 🟢 Using Claude with MCP
 
@@ -112,12 +112,11 @@ When exposing MCP capabilities to an LLM, always:
 
 ## 🧠 Use Case Examples
 
-| LLM Prompt (User Says) | Capability Triggered |
-
-| --- | --- |
-| "What's the status of order #123?" | getOrderStatus(orderId) |
-| "Book a meeting with Sarah tomorrow."| createCalendarEvent(...) |
-| "Show me Johnâ€™s recent tickets." | getSupportTickets(userId) |
+| LLM Prompt (User Says) | Capability Triggered
+| --- | ---
+| "What's the status of order #123?" | getOrderStatus(orderId)
+| "Book a meeting with Sarah tomorrow."| createCalendarEvent(...)
+| "Show me Johnâ€™s recent tickets." | getSupportTickets(userId)
 
 ---
 

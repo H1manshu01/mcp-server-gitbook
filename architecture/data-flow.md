@@ -21,26 +21,35 @@ graph TD
 ## 🔁 Step-by-Step Breakdown
 
 1.AI Model (MCP Host)
-    - The LLM (e.g., Claude or ChatGPT) generates a structured request for more context.
-    - This request is often triggered by the system prompt or user input.
-    - It is passed to the MCP Client using a defined protocol (usually JSON).
+
+- The LLM (e.g., Claude or ChatGPT) generates a structured request for more context.
+- This request is often triggered by the system prompt or user input.
+- It is passed to the MCP Client using a defined protocol (usually JSON).
+
 2.MCP Client
-    - Acts as a translator between the model and your backend.
-    - Validates the request.
-    - Maps the requested capability (e.g., getUserInfo) to the right MCP Server.
-    - Sends the request with any parameters.
+
+- Acts as a translator between the model and your backend.
+- Validates the request.
+- Maps the requested capability (e.g., getUserInfo) to the right MCP Server.
+- Sends the request with any parameters.
+
 3.MCP Server
-    - Handles the logic for the requested capability.
-    - Queries the database, hits an API, or performs an action.
-    - Returns the result to the MCP Client in a clean, structured format.
+
+- Handles the logic for the requested capability.
+- Queries the database, hits an API, or performs an action.
+- Returns the result to the MCP Client in a clean, structured format.
+
 4.Internal System (DB, API, etc.)
-    - The actual source of truth (e.g., SQL database, CRM, ERP).
-    - Responds to the query made by the MCP server.
-    - Never interacts with the model directly — fully abstracted via the MCP server.
+
+- The actual source of truth (e.g., SQL database, CRM, ERP).
+- Responds to the query made by the MCP server.
+- Never interacts with the model directly — fully abstracted via the MCP server.
+
 5.Response Propagation
-    - The MCP Server sends the result back to the MCP Client.
-    - The MCP Client reformats the response (if necessary) for LLM consumption.
-    - The AI model receives the structured context and uses it to generate an intelligent reply.
+
+- The MCP Server sends the result back to the MCP Client.
+- The MCP Client reformats the response (if necessary) for LLM consumption.
+- The AI model receives the structured context and uses it to generate an intelligent reply.
 
 ## 📦 Data Format Example
 
